@@ -271,7 +271,7 @@ input[type="radio"].visually-hidden {
 .range input {
   width: 100%;
   position: absolute;
-  top: 1px;
+  top: 0;
   height: 0;
   -webkit-appearance: none;
 
@@ -458,7 +458,7 @@ li:nth-child(4) {
   justify-content: center;
   align-items: center;
   height: 50px;
-  width: 50px;
+  width: 47px;
   font-size: 14px;
   line-height: 16.4px;
   color: #c70122;
