@@ -79,7 +79,160 @@
     </header>
     <main class="main">
       <div class="container">
-        <section class="card card-four">
+        <section class="card card-one" style="display: none">
+          <div class="card-wrapper card-one__wrapper">
+            <h1 class="card__title card-one__title">
+              Пройдите короткий опрос от компании "Tesla X" и получите доступ к
+              платформе
+            </h1>
+            <img
+              class="card__img card-one__img"
+              src="./src/images/card_1.png"
+              width="146"
+              height="111"
+              alt="logo Tesla X"
+            />
+          </div>
+        </section>
+        <section class="card card-two" style="display: none">
+          <div class="card-wrapper card-two__wrapper">
+            <img
+              class="card__lamp card-two__lamp"
+              src="./src/images/icon_lamp.png"
+              width="18"
+              height="25"
+              alt=""
+            />
+            <h1 class="card__title">У вас был опыт в инвестировании?</h1>
+            <p class="card__description">
+              Это позволит организовать удобное рабочее пространство в кабинете
+            </p>
+            <div class="card__checkbox">
+              <div class="card__checkbox-wrapper">
+                <input
+                  class="visually-hidden"
+                  type="radio"
+                  name="card-1"
+                  value="1"
+                />
+
+                <img
+                  class="card__img"
+                  src="./src/images/card_2-yes.png"
+                  width="68"
+                  height="68"
+                  alt="yes"
+                />
+                <p class="card__checkbox-text">Да</p>
+              </div>
+              <div class="card__checkbox-wrapper">
+                <input
+                  class="visually-hidden"
+                  type="radio"
+                  name="card-1"
+                  value="2"
+                />
+
+                <img
+                  class="card__img"
+                  src="./src/images/card_2-no.png"
+                  width="68"
+                  height="68"
+                  alt="yes"
+                />
+                <p class="card__checkbox-text">Нет</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="card card-three" style="display: none">
+          <div class="card-wrapper card-three__wrapper">
+            <img
+              class="card__lamp card-three__lamp"
+              src="./src/images/icon_lamp.png"
+              width="18"
+              height="25"
+              alt=""
+            />
+            <h1 class="card__title">
+              Какую стратегию работы с продуктом вы бы выбрали?
+            </h1>
+            <p class="card__description">
+              Это позволит настроить торговые алгоритмы относительно ваших целей
+            </p>
+            <div class="card__checkbox">
+              <div class="card__checkbox-wrapper">
+                <input
+                  class="visually-hidden"
+                  type="radio"
+                  name="investment"
+                  value="1"
+                />
+
+                <img
+                  class="card__img"
+                  src="./src/images/card_short-term.png"
+                  width="81"
+                  height="47"
+                  alt="yes"
+                />
+                <p class="card__checkbox-text">Короткосрочные инвестиции</p>
+              </div>
+              <div class="card__checkbox-wrapper">
+                <input
+                  class="visually-hidden"
+                  type="radio"
+                  name="investment"
+                  value="2"
+                />
+
+                <img
+                  class="card__img"
+                  src="./src/images/card_medium-term.png"
+                  width="81"
+                  height="47"
+                  alt="yes"
+                />
+                <p class="card__checkbox-text">Среднесрочные инвестиции</p>
+              </div>
+              <div class="card__checkbox-wrapper">
+                <input
+                  class="visually-hidden"
+                  type="radio"
+                  name="investment"
+                  value="3"
+                />
+
+                <img
+                  class="card__img"
+                  src="./src/images/card_long-term.png"
+                  width="81"
+                  height="47"
+                  alt="yes"
+                />
+                <p class="card__checkbox-text">Долгосрочные инвестиции</p>
+              </div>
+              <div class="card__checkbox-wrapper">
+                <input
+                  class="visually-hidden"
+                  type="radio"
+                  name="investment"
+                  value="4"
+                />
+
+                <img
+                  class="card__img"
+                  src="./src/images/card_don't-know.png"
+                  width="56"
+                  height="56"
+                  alt="yes"
+                />
+                <p class="card__checkbox-text">Еще не знаю</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="card card-four" style="display: none">
           <div class="card-wrapper card-three__wrapper">
             <img
               class="card__lamp card-four__lamp"
@@ -94,6 +247,119 @@
             <p class="card__description">
               Это позволит подготовить соответствующую торговую стратегию
             </p>
+            <div class="range">
+              <input type="range" min="1" max="4" steps="1" value="1" />
+            </div>
+
+            <ul class="range-labels">
+              <li class="active selected">2.500€</li>
+              <li>3.000€</li>
+              <li>10.000€</li>
+              <li>30.000€</li>
+            </ul>
+          </div>
+        </section>
+        <section class="card card-five" style="display: none">
+          <div class="card-wrapper card-five__wrapper">
+            <h1 class="card__title">
+              Сколько времени вы готовы тратить на инвестирование?
+            </h1>
+
+            <div class="card__checkbox">
+              <div class="card__checkbox-wrapper">
+                <input
+                  class="visually-hidden"
+                  type="radio"
+                  name="investment"
+                  value="1"
+                />
+
+                <img
+                  class="card__img"
+                  src="./src/images/card5_1.png"
+                  width="50"
+                  height="43"
+                  alt=""
+                />
+                <p class="card__checkbox-text">1 час<br />каждый день</p>
+              </div>
+              <div class="card__checkbox-wrapper">
+                <input
+                  class="visually-hidden"
+                  type="radio"
+                  name="investment"
+                  value="2"
+                />
+
+                <img
+                  class="card__img card-five__img-2"
+                  src="./src/images/card5_2.png"
+                  width="50"
+                  height="38"
+                  alt=""
+                />
+                <p class="card__checkbox-text">2 часа<br />раз в неделю</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="card card-six">
+          <div class="card-wrapper card-six__wrapper">
+            <h1 class="card__title">
+              Укажите свои данные и получите доступ к своему кабинету, и начните
+              зарабатывать уже сегодня!
+            </h1>
+
+            <form class="form" action="#" method="post">
+              <div class="form__wrapper">
+                <label for="name">Ваше имя</label><br />
+                <input
+                  class="form__input"
+                  id="name"
+                  type="text"
+                  name="name"
+                  placeholder="Имя"
+                />
+              </div>
+              <div class="form__wrapper">
+                <label for="surname">Ваша фамилия</label><br />
+                <input
+                  class="form__input"
+                  id="surname"
+                  type="text"
+                  name="surname"
+                  placeholder="Фамилия"
+                />
+              </div>
+
+              <div class="form__wrapper">
+                <label for="email">Ваш e-mail</label><br />
+                <input
+                  class="form__input"
+                  id="email"
+                  type="email"
+                  name="email"
+                  placeholder="Email"
+                />
+              </div>
+
+              <div class="form__wrapper">
+                <label for="number">Ваш номер телефона</label><br />
+
+                <input
+                  class="form__input"
+                  id="number"
+                  type="tel"
+                  name="number"
+                  placeholder="Номер телефона"
+                />
+              </div>
+
+              <button class="button form__button" type="submit">
+                Начать зарабатывать
+              </button>
+            </form>
           </div>
         </section>
 
