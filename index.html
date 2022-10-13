@@ -313,7 +313,7 @@
 
             <form class="form" action="#" method="post">
               <div class="form__wrapper">
-                <label for="name">Ваше имя</label><br />
+                <label class="form__label" for="name">Ваше имя</label><br />
                 <input
                   class="form__input"
                   id="name"
@@ -323,7 +323,8 @@
                 />
               </div>
               <div class="form__wrapper">
-                <label for="surname">Ваша фамилия</label><br />
+                <label class="form__label" for="surname">Ваша фамилия</label
+                ><br />
                 <input
                   class="form__input"
                   id="surname"
@@ -334,7 +335,7 @@
               </div>
 
               <div class="form__wrapper">
-                <label for="email">Ваш e-mail</label><br />
+                <label class="form__label" for="email">Ваш e-mail</label><br />
                 <input
                   class="form__input"
                   id="email"
@@ -345,7 +346,9 @@
               </div>
 
               <div class="form__wrapper">
-                <label for="number">Ваш номер телефона</label><br />
+                <label class="form__label" for="number"
+                  >Ваш номер телефона</label
+                ><br />
 
                 <input
                   class="form__input"
@@ -355,10 +358,6 @@
                   placeholder="Номер телефона"
                 />
               </div>
-
-              <button class="button form__button" type="submit">
-                Начать зарабатывать
-              </button>
             </form>
           </div>
         </section>
@@ -369,7 +368,7 @@
     <footer class="footer">
       <div class="container">
         <div class="time-text">Осталось времени:</div>
-        <div class="timer">
+        <!-- <div class="timer">
           <svg
             width="50"
             height="50"
@@ -383,6 +382,22 @@
             />
             <circle cx="25" cy="25" r="24" stroke="#C70122" stroke-width="2" />
           </svg>
+        </div> -->
+        <div class="timer-wrap">
+        
+          <div class="timer-new">
+            <div class="timer__index">
+              <span id="min" class="timer__item minutes time">2</span>
+            </div>
+            <div class="timer__point"></div>
+            <div class="timer__index">
+              <span id="sec" class="timer__item minutes time">51</span>
+            </div>
+          </div>
+          <!-- <div class="under-timer">
+            <span class="under-timer-text--2">Минут</span>
+            <span class="under-timer-text--3">Секунд </span>
+          </div> -->
         </div>
       </div>
     </footer>
