@@ -77,6 +77,11 @@ input[type="radio"].visually-hidden {
   background-color: $redColor;
   border: none;
   cursor: pointer;
+  box-shadow: 0px 6px 40px 0px rgba(0, 0, 0, 0.1);
+
+  &:active {
+    background-color: #ae031f;
+  }
 }
 
 .container {
@@ -111,6 +116,14 @@ input[type="radio"].visually-hidden {
   justify-content: space-between;
 }
 
+.header__arrow {
+  cursor: pointer;
+}
+
+.header svg circle:active {
+  fill: #D7D7D7;
+}
+
 .current-number {
   color: $redColor;
 }
@@ -123,6 +136,7 @@ input[type="radio"].visually-hidden {
   padding: 28px 16px 10px;
   background-color: #fff;
   margin-bottom: 19px;
+  box-shadow: 0px 6px 40px 0px rgba(0, 0, 0, 0.1);
 }
 
 .card-one {
@@ -180,6 +194,7 @@ input[type="radio"].visually-hidden {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  
 }
 
 .card__checkbox-wrapper {
@@ -188,10 +203,15 @@ input[type="radio"].visually-hidden {
   width: 121px;
   height: 143px;
   background-color: #f3f3f3;
+  cursor: pointer;
 
   &:nth-child(2n) {
     margin-right: 0;
   }
+}
+
+.border {
+  border: 1px solid #C70122;
 }
 
 .card__checkbox-text {
@@ -386,21 +406,15 @@ input[type="radio"].visually-hidden {
   line-height: 16.4px;
 }
 
-
-
-
 .timer-wrap {
   width: 50px;
   margin: 0 auto;
- 
+
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 8px;
   border: 1px solid #c70122;
-  
 }
-
-
 
 .timer-new {
   display: flex;
@@ -408,9 +422,7 @@ input[type="radio"].visually-hidden {
   line-height: 16.4px;
   color: #c70122;
   text-align: center;
- 
 }
-
 
 .timer__index {
   display: inline-block;
@@ -424,9 +436,7 @@ input[type="radio"].visually-hidden {
 .timer__item {
   display: block;
   padding: 5px 0 0 5px;
-  
 }
-
 
 .timer__point {
   display: inline-block;
@@ -449,8 +459,3 @@ input[type="radio"].visually-hidden {
 .timer__point::after {
   top: 14px;
 }
-
-
-
-
-

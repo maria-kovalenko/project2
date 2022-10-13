@@ -13,7 +13,7 @@
           <div class="header__scrollbal-over"></div>
         </div>
         <div class="header__navigation">
-          <div class="header__arrow-left">
+          <div class="header__arrow header__arrow-left">
             <svg
               width="25"
               height="25"
@@ -43,7 +43,7 @@
           <div class="header__number">
             <span class="current-number">1</span>/5
           </div>
-          <div class="header__arrow-right">
+          <div class="header__arrow header__arrow-right">
             <svg
               width="25"
               height="25"
@@ -79,7 +79,7 @@
     </header>
     <main class="main">
       <div class="container">
-        <section class="card card-one" style="display: none">
+        <section class="card card-one" style="display: block">
           <div class="card-wrapper card-one__wrapper">
             <h1 class="card__title card-one__title">
               Пройдите короткий опрос от компании "Tesla X" и получите доступ к
@@ -108,12 +108,13 @@
               Это позволит организовать удобное рабочее пространство в кабинете
             </p>
             <div class="card__checkbox">
-              <div class="card__checkbox-wrapper">
+              <div class="card__checkbox-wrapper border">
                 <input
                   class="visually-hidden"
                   type="radio"
                   name="card-1"
                   value="1"
+                  checked
                 />
 
                 <img
@@ -145,7 +146,7 @@
             </div>
           </div>
         </section>
-        <section class="card card-three" style="display: none">
+        <section class="card card-three" style="display: block">
           <div class="card-wrapper card-three__wrapper">
             <img
               class="card__lamp card-three__lamp"
@@ -161,12 +162,13 @@
               Это позволит настроить торговые алгоритмы относительно ваших целей
             </p>
             <div class="card__checkbox">
-              <div class="card__checkbox-wrapper">
+              <div class="card__checkbox-wrapper border">
                 <input
                   class="visually-hidden"
                   type="radio"
                   name="investment"
                   value="1"
+                  checked
                 />
 
                 <img
@@ -232,7 +234,7 @@
             </div>
           </div>
         </section>
-        <section class="card card-four" style="display: none">
+        <section class="card card-four" style="display: block">
           <div class="card-wrapper card-three__wrapper">
             <img
               class="card__lamp card-four__lamp"
@@ -259,19 +261,20 @@
             </ul>
           </div>
         </section>
-        <section class="card card-five" style="display: none">
+        <section class="card card-five" style="display: block">
           <div class="card-wrapper card-five__wrapper">
             <h1 class="card__title">
               Сколько времени вы готовы тратить на инвестирование?
             </h1>
 
             <div class="card__checkbox">
-              <div class="card__checkbox-wrapper">
+              <div class="card__checkbox-wrapper border">
                 <input
                   class="visually-hidden"
                   type="radio"
                   name="investment"
                   value="1"
+                  checked
                 />
 
                 <img
@@ -304,7 +307,7 @@
           </div>
         </section>
 
-        <section class="card card-six" style="display: none">
+        <section class="card card-six" style="display: block">
           <div class="card-wrapper card-six__wrapper">
             <h1 class="card__title">
               Укажите свои данные и получите доступ к своему кабинету, и начните
@@ -386,11 +389,11 @@
         <div class="timer-wrap">
           <div class="timer-new">
             <div class="timer__index">
-              <span id="min" class="timer__item minutes time">2</span>
+              <span id="min" class="timer__item minutes time">3</span>
             </div>
             <div class="timer__point"></div>
             <div class="timer__index">
-              <span id="sec" class="timer__item minutes time">51</span>
+              <span id="sec" class="timer__item minutes time">00</span>
             </div>
           </div>
           <!-- <div class="under-timer">
