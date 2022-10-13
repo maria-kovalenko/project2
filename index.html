@@ -5,10 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <script type="module" crossorigin src="/assets/main.aacf133d.js"></script>
-    <link rel="stylesheet" href="/assets/css/index-3a993867.css">
-    <script type="module">try{import.meta.url;import("_").catch(()=>1);}catch(e){}window.__vite_is_modern_browser=true;</script>
-    <script type="module">!function(){if(window.__vite_is_modern_browser)return;console.warn("vite: loading legacy build because dynamic import or import.meta.url is unsupported, syntax error above should be ignored");var e=document.getElementById("vite-legacy-polyfill"),n=document.createElement("script");n.src=e.src,n.onload=function(){System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))},document.body.appendChild(n)}();</script>
+    <script type="module" crossorigin src="assets/main.aacf133d.js"></script>
+    <link rel="stylesheet" href="assets/css/index-3a993867.css" />
+    <script type="module">
+      try {
+        import.meta.url;
+        import("_").catch(() => 1);
+      } catch (e) {}
+      window.__vite_is_modern_browser = true;
+    </script>
+    <script type="module">
+      !(function () {
+        if (window.__vite_is_modern_browser) return;
+        console.warn(
+          "vite: loading legacy build because dynamic import or import.meta.url is unsupported, syntax error above should be ignored"
+        );
+        var e = document.getElementById("vite-legacy-polyfill"),
+          n = document.createElement("script");
+        (n.src = e.src),
+          (n.onload = function () {
+            System.import(
+              document
+                .getElementById("vite-legacy-entry")
+                .getAttribute("data-src")
+            );
+          }),
+          document.body.appendChild(n);
+      })();
+    </script>
   </head>
   <body>
     <header class="header">
@@ -83,7 +107,7 @@
     </header>
     <main class="main">
       <div class="container">
-        <section class="card card-one" >
+        <section class="card card-one">
           <div class="card-wrapper card-one__wrapper">
             <h1 class="card__title card-one__title">
               Пройдите короткий опрос от компании "Tesla X" и получите доступ к
@@ -91,7 +115,7 @@
             </h1>
             <img
               class="card__img card-one__img"
-              src="/assets/images/card_1-82200e89.png"
+              src="assets/images/card_1-82200e89.png"
               width="146"
               height="111"
               alt="logo Tesla X"
@@ -150,7 +174,7 @@
             </div>
           </div>
         </section>
-        <section class="card card-three" >
+        <section class="card card-three">
           <div class="card-wrapper card-three__wrapper">
             <img
               class="card__lamp card-three__lamp"
@@ -238,7 +262,7 @@
             </div>
           </div>
         </section>
-        <section class="card card-four" >
+        <section class="card card-four">
           <div class="card-wrapper card-three__wrapper">
             <img
               class="card__lamp card-four__lamp"
@@ -267,7 +291,7 @@
             </div>
           </div>
         </section>
-        <section class="card card-five" >
+        <section class="card card-five">
           <div class="card-wrapper card-five__wrapper">
             <h1 class="card__title">
               Сколько времени вы готовы тратить на инвестирование?
@@ -312,7 +336,7 @@
             </div>
           </div>
         </section>
-        <section class="card card-six" >
+        <section class="card card-six">
           <div class="card-wrapper card-six__wrapper">
             <h1 class="card__title">
               Укажите свои данные и получите доступ к своему кабинету, и начните
@@ -369,7 +393,9 @@
             </form>
           </div>
         </section>
-        <button id="button_next" class="button" type="button" href="#">Начать</button>
+        <button id="button_next" class="button" type="button" href="#">
+          Начать
+        </button>
       </div>
     </main>
     <footer class="footer">
@@ -389,9 +415,44 @@
       </div>
     </footer>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    
-    <script nomodule>!function(){var e=document,t=e.createElement("script");if(!("noModule"in t)&&"onbeforeload"in t){var n=!1;e.addEventListener("beforeload",(function(e){if(e.target===t)n=!0;else if(!e.target.hasAttribute("nomodule")||!n)return;e.preventDefault()}),!0),t.type="module",t.src=".",e.head.appendChild(t),t.remove()}}();</script>
-    <script nomodule crossorigin id="vite-legacy-polyfill" src="/assets/polyfills-legacy.907dbd91.js"></script>
-    <script nomodule crossorigin id="vite-legacy-entry" data-src="/assets/main-legacy.84ea1ca6.js">System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))</script>
+
+    <script nomodule>
+      !(function () {
+        var e = document,
+          t = e.createElement("script");
+        if (!("noModule" in t) && "onbeforeload" in t) {
+          var n = !1;
+          e.addEventListener(
+            "beforeload",
+            function (e) {
+              if (e.target === t) n = !0;
+              else if (!e.target.hasAttribute("nomodule") || !n) return;
+              e.preventDefault();
+            },
+            !0
+          ),
+            (t.type = "module"),
+            (t.src = "."),
+            e.head.appendChild(t),
+            t.remove();
+        }
+      })();
+    </script>
+    <script
+      nomodule
+      crossorigin
+      id="vite-legacy-polyfill"
+      src="assets/polyfills-legacy.907dbd91.js"
+    ></script>
+    <script
+      nomodule
+      crossorigin
+      id="vite-legacy-entry"
+      data-src="assets/main-legacy.84ea1ca6.js"
+    >
+      System.import(
+        document.getElementById("vite-legacy-entry").getAttribute("data-src")
+      );
+    </script>
   </body>
 </html>
