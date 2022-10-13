@@ -133,6 +133,7 @@ input[type="radio"].visually-hidden {
 }
 
 .card {
+  display: none;
   padding: 28px 16px 10px;
   background-color: #fff;
   margin-bottom: 19px;
@@ -458,4 +459,8 @@ input[type="radio"].visually-hidden {
 }
 .timer__point::after {
   top: 14px;
+}
+
+.show {
+  display: block;
 }
