@@ -580,6 +580,18 @@ input[type="radio"].visually-hidden {
   text-align: center;
 }
 
+.hidden {
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+}
+
+/*unhidden {*/
+/*  height: 0;*/
+/*  opacity: 0;*/
+/*  overflow: hidden;*/
+/*}*/
+
 .time-text {
   margin-bottom: 15px;
   font-size: 14px;
