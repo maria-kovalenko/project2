@@ -311,11 +311,12 @@ input[type="radio"].visually-hidden {
 }
 
 .card {
-  display: none;
+  display: block;
   padding: 28px 16px 10px;
   background-color: #fff;
   margin-bottom: 19px;
   box-shadow: 0 6px 40px rgba(0, 0, 0, 0.1);
+  transition: opacity 1s;
 }
 
 /*---------------card-one------------- */
@@ -597,6 +598,8 @@ input[type="radio"].visually-hidden {
 }
 
 .hidden {
+  margin: 0;
+  padding: 0;
   height: 0;
   opacity: 0;
   overflow: hidden;
@@ -668,3 +671,5 @@ input[type="radio"].visually-hidden {
 .show {
   display: block;
 }
+
+
