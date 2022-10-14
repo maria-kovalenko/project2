@@ -125,9 +125,9 @@ class SlidCart {
 }
 let slidCart = new SlidCart();
 // slidCart.showSlide();
-buttonNext.addEventListener("pointerdown", slidCart);
-arrowLeft.addEventListener("pointerdown", slidCart);
-arrowRight.addEventListener("pointerdown", slidCart);
+buttonNext.addEventListener("pointerup", slidCart);
+arrowLeft.addEventListener("pointerup", slidCart);
+arrowRight.addEventListener("pointerup", slidCart);
 
 // -------------------timer-------------------------------
 
