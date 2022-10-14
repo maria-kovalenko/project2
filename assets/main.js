@@ -39,7 +39,7 @@ class SlidCart {
   handleEvent(event) {
     if(event.currentTarget.matches('#button_next')) { if(this.prev == null) { start_timer() } return this.nextSlide()}
     if(event.currentTarget.matches('.header__arrow-left')) { return this.prevSlide()}
-    if(event.currentTarget.matches('.header__arrow-right')) { return this.nextSlide()}
+    if(event.currentTarget.matches('.header__arrow-right')) { if (this.prev == null) { start_timer() } return this.nextSlide()}
   }
 
   nextSlide() {
