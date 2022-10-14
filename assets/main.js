@@ -95,12 +95,12 @@ class SlidCart {
 
   showSlide() {
     // debugger
-    let showSlide = allCard[this.current];
-    showSlide.classList.add("show");
     if (this.prev !== null) {
       let hiddenSlide = allCard[this.prev];
-      hiddenSlide.classList.remove("show");
+      hiddenSlide.classList.add("hidden");
     }
+    let showSlide = allCard[this.current];
+    showSlide.classList.remove("hidden");
     this.setTextButton();
     this.scrollBar();
   }

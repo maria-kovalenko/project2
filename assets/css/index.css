@@ -316,7 +316,7 @@ input[type="radio"].visually-hidden {
   background-color: #fff;
   margin-bottom: 19px;
   box-shadow: 0 6px 40px rgba(0, 0, 0, 0.1);
-  transition: opacity 1s;
+  transition: opacity 1.3s;
 }
 
 /*---------------card-one------------- */
@@ -440,7 +440,7 @@ input[type="radio"].visually-hidden {
   left: 80px;
   width: 13px;
   height: 16px;
-  background: url(/assets/images/icon-point.svg) no-repeat;
+  background: url(../images/icon-point.svg) no-repeat;
   cursor: pointer;
   z-index: 5;
   touch-action: none;
