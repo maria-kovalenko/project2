@@ -33,17 +33,18 @@ const elemScroll = document.querySelector('.header__scrollbal')
 class SlidCart {
   constructor() {
     this.prev = null;
-    this.current = 1;
-    this.slideLength = allCard.length;
+    this.current = 0;
+    this.slideLength = allCard.length -1;
   }
 
   handleEvent(event) {
-    if(event.currentTarget.matches('#button_next')) { return this.nextSlide()}
+    if(event.currentTarget.matches('#button_next')) { if(this.prev == null) { start_timer() } return this.nextSlide()}
     if(event.currentTarget.matches('.header__arrow-left')) { return this.prevSlide()}
     if(event.currentTarget.matches('.header__arrow-right')) { return this.nextSlide()}
   }
 
   nextSlide() {
+    // debugger
     if(this.current === this.slideLength) return;
     this.prev = this.current
     this.current++
@@ -58,10 +59,11 @@ class SlidCart {
   }
 
   showSlide() {
-    let showSlide = allCard[this.current - 1]
+    // debugger
+    let showSlide = allCard[this.current]
     showSlide.classList.add("show")
-    if(this.prev) {
-      let hiddenSlide = allCard[this.prev - 1]
+    if(this.prev !== null) {
+      let hiddenSlide = allCard[this.prev]
       hiddenSlide.classList.remove("show")
     }
     this.setTextButton()
@@ -69,11 +71,7 @@ class SlidCart {
   }
 
   setTextButton() {
-    if (this.current === 1 ){
-      buttonNext.innerHTML = "Начать";
-      return
-    }
-    if (this.current > 1 ){
+    if (this.current > 0 ){
       buttonNext.innerHTML = "Далее";
     }
     if(this.current === this.slideLength){
@@ -89,13 +87,14 @@ class SlidCart {
   }
 }
 let slidCart = new SlidCart();
-slidCart.showSlide();
+// slidCart.showSlide();
 buttonNext.addEventListener('pointerdown', slidCart);
 arrowLeft.addEventListener('pointerdown', slidCart);
 arrowRight.addEventListener('pointerdown', slidCart);
 
 // -------------------timer-------------------------------
 
+let elemTimer = document.querySelector('.footer')
 let time = 180;
 let intr;
 function tick() {
@@ -115,10 +114,11 @@ function tick() {
 }
 
 function start_timer() {
+  elemTimer.classList.remove('hidden');
   intr = setInterval(tick, 1000);
 }
 
-start_timer();
+// start_timer();
 
 //-----------------input range--------------------------------
 
