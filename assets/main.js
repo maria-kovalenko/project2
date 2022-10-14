@@ -1,3 +1,28 @@
+//-------------------Range line-------------------------------
+let thumb = document.querySelector('.thumb');
+let rangeLine = document.querySelector('.range__line');
+let pointElem = document.querySelectorAll('.range__item')
+
+pointElem.forEach((el, i)=>{
+  el.addEventListener("pointerdown", onPointerDown)
+});
+
+function onPointerDown(event) {
+  event.preventDefault();
+  let point = event.target.offsetLeft
+  rangeLine.style.width = point + 'px';
+  thumb.style.left = point - 3 + 'px';
+  pointElem.forEach(el => {
+    console.log(el.offsetLeft)
+    if(el.offsetLeft <= point) {
+      el.style.background = "#c70122";
+    }
+    if(el.offsetLeft > point) {
+      el.style.background = "#f3f3f3";
+    }
+  })
+}
+
 //-------------------Checkbox Border-------------------------------
 
 const allCheckbox = document.querySelectorAll(".card__checkbox");
@@ -129,4 +154,3 @@ function start_timer() {
   elemTimer.classList.remove("hidden");
   intr = setInterval(tick, 1000);
 }
-
