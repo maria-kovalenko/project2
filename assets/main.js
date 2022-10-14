@@ -1,26 +1,25 @@
 
 //-------------------Checkbox Border-------------------------------
 
-const allCheckbox = document.querySelectorAll('.card__checkbox')
+const allCheckbox = document.querySelectorAll(".card__checkbox");
 
 function handleChecked(e) {
-  let target = e.target
+  let target = e.target;
   for (let elem of this.children) {
-    elem.children[0].removeAttribute('checked')
-    elem.classList.remove('border');
+    elem.children[0].removeAttribute("checked");
+    elem.classList.remove("border");
   }
   while (target != this) {
-    if (target.matches('.card__checkbox-wrapper')){
-      target.children[0].setAttribute('checked','')
-      target.classList.add('border');
+    if (target.matches(".card__checkbox-wrapper")) {
+      target.children[0].setAttribute("checked", "");
+      target.classList.add("border");
     }
     target = target.parentNode;
   }
 }
 for (let elem of allCheckbox) {
-  elem.addEventListener('pointerdown', handleChecked);
+  elem.addEventListener("pointerdown", handleChecked);
 }
-
 
 //-------------------Slider-------------------------------
 const allCard = document.querySelectorAll('.card')
@@ -117,58 +116,3 @@ function start_timer() {
   elemTimer.classList.remove('hidden');
   intr = setInterval(tick, 1000);
 }
-
-// start_timer();
-
-//-----------------input range--------------------------------
-
-// var sheet = document.createElement("style"),
-//   $rangeInput = $(".range input"),
-//   prefs = ["webkit-slider-runnable-track", "moz-range-track", "ms-track"];
-
-// document.body.appendChild(sheet);
-
-// var getTrackStyle = function (el) {
-//   var curVal = el.value,
-//     val = (curVal - 1) * 32.666666667,
-//     style = "";
-
-//   // Set active label
-//   $(".range-labels li").removeClass("active selected");
-
-//   var curLabel = $(".range-labels").find("li:nth-child(" + curVal + ")");
-
-//   curLabel.addClass("active selected");
-//   curLabel.prevAll().addClass("selected");
-
-//   // Change background gradient
-//   for (var i = 0; i < prefs.length; i++) {
-//     style +=
-//       ".range {background: linear-gradient(to right, #C70122 0%, #C70122 " +
-//       val +
-//       "%, #fff " +
-//       val +
-//       "%, #fff 100%)}";
-//     style +=
-//       ".range input::-" +
-//       prefs[i] +
-//       "{background: linear-gradient(to right, #C70122 0%, #C70122 " +
-//       val +
-//       "%, #f3f3f3 " +
-//       val +
-//       "%, #f3f3f3 100%)}";
-//   }
-
-//   return style;
-// };
-
-// $rangeInput.on("input", function () {
-//   sheet.textContent = getTrackStyle(this);
-// });
-
-// // Change input value on label click
-// $(".range-labels li").on("click", function () {
-//   var index = $(this).index();
-
-//   $rangeInput.val(index + 1).trigger("input");
-// });
