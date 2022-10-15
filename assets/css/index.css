@@ -431,8 +431,10 @@ input[type="radio"].visually-hidden {
   width: 79px;
   height: 2px;
   background-color: #c70122;
-  transition: width 0.3s;
+
 }
+.transitionLeft { transition: left 0.5s; }
+.transitionWidth { transition: width 0.5s; }
 
 .range__line .thumb {
   position: absolute;
@@ -444,9 +446,8 @@ input[type="radio"].visually-hidden {
   cursor: pointer;
   z-index: 5;
   touch-action: none;
-  transition: left 0.3s;
-}
 
+}
 .range__item {
   position: absolute;
   width: 45px;
