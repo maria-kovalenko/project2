@@ -440,8 +440,8 @@ input[type="radio"].visually-hidden {
   position: absolute;
   top: -6px;
   left: 80px;
-  width: 13px;
-  height: 16px;
+  width: 27px;
+  height: 27px;
   background: url(../images/icon-point.svg) no-repeat;
   cursor: pointer;
   z-index: 5;
