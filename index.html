@@ -252,7 +252,6 @@
             </p>
 
             <div class="range">
-
               <div class="range__line transitionWidth">
                 <span class="thumb transitionLeft"></span>
               </div>
@@ -260,7 +259,6 @@
               <div class="range__item range__item-2"></div>
               <div class="range__item range__item-3"></div>
               <div class="range__item range__item-4"></div>
-
             </div>
           </div>
         </section>
@@ -325,7 +323,9 @@
                   type="text"
                   name="name"
                   placeholder="Имя"
+                  required
                 />
+                <div class="invalid-feedback">Введите ваше имя</div>
               </div>
               <div class="form__wrapper">
                 <label class="form__label" for="surname">Ваша фамилия</label
@@ -336,7 +336,9 @@
                   type="text"
                   name="surname"
                   placeholder="Фамилия"
+                  required
                 />
+                <div class="invalid-feedback">Введите вашу фамилию</div>
               </div>
 
               <div class="form__wrapper">
@@ -347,7 +349,9 @@
                   type="email"
                   name="email"
                   placeholder="Email"
+                  required
                 />
+                <div class="invalid-feedback">Введите e-mail</div>
               </div>
 
               <div class="form__wrapper">
@@ -361,7 +365,9 @@
                   type="tel"
                   name="number"
                   placeholder="Номер телефона"
+                  required
                 />
+                <div class="invalid-feedback">Введите номер телефона</div>
               </div>
             </form>
           </div>
