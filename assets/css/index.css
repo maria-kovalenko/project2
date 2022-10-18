@@ -601,7 +601,7 @@ input[type="radio"].visually-hidden {
 .border-invalid {
   border: 1px solid #c70122;
   border-radius: 6px;
-  background: url(/assets/images/icon-no-valid.svg) no-repeat;
+  background: url(../images/icon-no-valid.svg) no-repeat;
   background-position: 97% 50%;
   background-size: 18px;
 }
@@ -609,7 +609,7 @@ input[type="radio"].visually-hidden {
 .border-valid {
   border: 1px solid #198754;
   border-radius: 6px;
-  background: url(/assets/images/icon-valid.svg) no-repeat;
+  background: url(../images/icon-valid.svg) no-repeat;
   background-position: 97% 50%;
   background-size: 18px;
 }
