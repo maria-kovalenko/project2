@@ -110,11 +110,11 @@ const validation =  {
 
         let place = input.placeholder.replace(/([()|-]|\s)/g, '')
         if (phone.replace(/([()|-]|\s)/g, '').length > (place.length + 1)) {
-            this.showError(`Номер телефона лишком длинный`, input, feedback)
+            this.showError(`Номер телефона cлишком длинный`, input, feedback)
             return false
         }
         if (phone.replace(/([()|-]|\s)/g, '').length < (place.length - 2)) {
-            this.showError(`Номер телефона лишком короткий`, input, feedback)
+            this.showError(`Номер телефона cлишком короткий`, input, feedback)
             return false
         }
         this.showSuccess(input, feedback)
