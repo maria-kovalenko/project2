@@ -125,7 +125,7 @@ const validation =  {
 //--------------------Validation and send-------------------------
 
 const form = document.querySelector('.form')
-const buttonNext = document.querySelector("#button_next");
+const buttonNew = document.querySelector("#button_next");
 
 // Добавление событиЙ отслеживания ввода символов
 // buttonNext.addEventListener("pointerdown", send);
@@ -141,7 +141,7 @@ const buttonNext = document.querySelector("#button_next");
 
 // Отправка данных формы и контрольная провека данных
 function send() {
-    if(buttonNext.dataset.slide !== '5') return
+    if(buttonNew.dataset.slide !== '5') return
     alert('Форма отправляется!')
     // const formData = new FormData(form)
     // let valid = validation.validForm(form, formData);
@@ -150,6 +150,6 @@ function send() {
     //   // form.submit()
     // }
 }
-buttonNext.onpointerdown = (event) => {
+buttonNew.onpointerdown = (event) => {
     send(event);
 }
