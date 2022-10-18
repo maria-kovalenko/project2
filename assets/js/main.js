@@ -32,7 +32,7 @@ buttonNext.onpointerdown = (event) => {
 }
 
 
-const validation =  {
+/*const validation =  {
   res: [],
   wrapper: null,
 
@@ -154,7 +154,7 @@ const validation =  {
     this.showSuccess(input, feedback)
     return true
   }
-}
+}*/
 
 //-------------------Checkbox Border-------------------------------
 
