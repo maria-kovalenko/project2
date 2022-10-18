@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="assets/css/index.css" />
+    <link rel="stylesheet" href="assets/css/intlTelInput.min.css">
   </head>
   <body>
     <header class="header">
@@ -80,7 +81,7 @@
     </header>
     <main class="main">
       <div class="container">
-        <section class="card card-one hidden">
+        <section class="card card-one">
           <div class="card-wrapper card-one__wrapper">
             <h1 class="card__title card-one__title">
               Пройдите короткий опрос от компании "Tesla X" и получите доступ к
@@ -235,7 +236,7 @@
             </div>
           </div>
         </section>
-        <section class="card card-four">
+        <section class="card card-four hidden">
           <div class="card-wrapper card-three__wrapper">
             <img
               class="card__lamp card-four__lamp"
@@ -252,15 +253,13 @@
             </p>
 
             <div class="range">
-
-              <div class="range__line">
-                <span class="thumb"></span>
+              <div class="range__line transitionWidth">
+                <span class="thumb transitionLeft"></span>
               </div>
               <div class="range__item range__item-1"></div>
               <div class="range__item range__item-2"></div>
               <div class="range__item range__item-3"></div>
               <div class="range__item range__item-4"></div>
-
             </div>
           </div>
         </section>
@@ -318,55 +317,68 @@
 
             <form class="form" action="#" method="post">
               <div class="form__wrapper">
-                <label class="form__label" for="name">Ваше имя</label><br />
+                <label class="form__label" for="name">Ваше имя</label>
                 <input
                   class="form__input"
                   id="name"
                   type="text"
                   name="name"
                   placeholder="Имя"
+                  required
                 />
+                <div class="feedback invalid-feedback"></div>
               </div>
               <div class="form__wrapper">
                 <label class="form__label" for="surname">Ваша фамилия</label
-                ><br />
+                >
                 <input
                   class="form__input"
                   id="surname"
                   type="text"
                   name="surname"
                   placeholder="Фамилия"
+                  required
                 />
+                <div class="feedback invalid-feedback"></div>
               </div>
 
               <div class="form__wrapper">
-                <label class="form__label" for="email">Ваш e-mail</label><br />
+                <label class="form__label" for="email">Ваш e-mail</label>
                 <input
                   class="form__input"
                   id="email"
                   type="email"
                   name="email"
                   placeholder="Email"
+                  required
                 />
+                <div class="feedback invalid-feedback"></div>
               </div>
 
               <div class="form__wrapper">
-                <label class="form__label" for="number"
+                <label class="form__label" for="phone"
                   >Ваш номер телефона</label
-                ><br />
+                >
 
                 <input
                   class="form__input"
-                  id="number"
+                  id="phone"
                   type="tel"
-                  name="number"
+                  name="phone"
                   placeholder="Номер телефона"
+                  required
                 />
+                <div class="feedback invalid-feedback"></div>
               </div>
+              <input
+                  type="hidden"
+                  name="country"
+                  value=""
+              />
             </form>
           </div>
         </section>
-        <button id="button_next" class="button" type="button" href="#">
+        <button data-slide="0" id="button_next" class="button" type="button" href="#">
           Начать
         </button>
       </div>
@@ -387,7 +399,16 @@
         </div>
       </div>
     </footer>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="assets/main.js" type="module"></script>
+
+
+    <script src="assets/js/slider.js" type="text/javascript"></script>
+    <script src="assets/js/rangeLine.js" type="text/javascript"></script>
+    <script src="assets/js/timer.js" type="text/javascript"></script>
+    <script src="assets/js/main.js" type="module"></script>
+
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/js/intlTelInput.min.js"></script>
+    <script src="assets/js/intlTelInput.js" type="text/javascript"></script>
+
   </body>
 </html>
