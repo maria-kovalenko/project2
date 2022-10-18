@@ -19,12 +19,13 @@ form.querySelectorAll('.form__wrapper').forEach(el => {
 // Отправка данных формы и контрольная провека данных
 function send() {
   if(buttonNext.dataset.slide !== '5') return
-  const formData = new FormData(form)
-  let valid = validation.validForm(form, formData);
-  if(valid) {
-    setTimeout(()=>{alert('Форма отправляется!')}, 1000)
-    // form.submit()
-  }
+  alert('Форма отправляется!')
+  // const formData = new FormData(form)
+  // let valid = validation.validForm(form, formData);
+  // if(valid) {
+  //   setTimeout(()=>{alert('Форма отправляется!')}, 1000)
+  //   // form.submit()
+  // }
 }
 buttonNext.onpointerdown = (event) => {
   send(event);
