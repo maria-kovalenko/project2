@@ -47,7 +47,7 @@ const validation =  {
     handleEventEmail(event) {
         let input = event.target
         let feedback = event.composedPath()[1].querySelector('.feedback')
-        // validation.ValidEmail(event.target.value, input, feedback)
+        validation.ValidEmail(event.target.value, input, feedback)
     },
     handleEventPhone(event) {
         let input = event.target
