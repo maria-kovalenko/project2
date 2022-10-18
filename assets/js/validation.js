@@ -75,20 +75,20 @@ const validation =  {
         return true
     },
 
-    // ValidEmail(email, input, feedback) {
-    //     if (email.replace(/\s/g, '') === "") {
-    //         this.showError(`Поле "${input.placeholder}" не должно быть пустым`, input, feedback)
-    //         return false
-    //     }
-    //     const regex = /^([\w]+\.?)+(?<!\.)@(?!\.)[a-zа-я0-9ё\.-]+\.?[a-zа-яё]{2,}$/ui;
-    //     let result = email.match(regex);
-    //     if (!result) {
-    //         this.showError('Недопустимый формат email-адреса', input, feedback)
-    //         return false
-    //     }
-    //     this.showSuccess(input, feedback)
-    //     return true
-    // },
+    ValidEmail(email, input, feedback) {
+        if (email.replace(/\s/g, '') === "") {
+            this.showError(`Поле "${input.placeholder}" не должно быть пустым`, input, feedback)
+            return false
+        }
+        // const regex = /^([\w]+\.?)+(?<!\.)@(?!\.)[a-zа-я0-9ё\.-]+\.?[a-zа-яё]{2,}$/ui;
+        // let result = email.match(regex);
+        // if (!result) {
+        //     this.showError('Недопустимый формат email-адреса', input, feedback)
+        //     return false
+        // }
+        this.showSuccess(input, feedback)
+        return true
+    },
 
     ValidPhone(phone, input, feedback) {
         // проверка на пустоту
@@ -129,6 +129,7 @@ const buttonNew = document.querySelector("#button_next");
 const inputName = form.querySelector("#name");
 const inputSurname = form.querySelector("#surname");
 const inputPhone = form.querySelector("#phone");
+const inputEmail = form.querySelector("#email");
 
 inputName.oninput = function(event) {
       validation.handleEventName(event)
@@ -138,6 +139,9 @@ inputSurname.oninput = function(event) {
 }
 inputPhone.oninput = function(event) {
     validation.handleEventPhone(event)
+}
+inputEmail.oninput = function(event) {
+    validation.handleEventEmail(event)
 }
 buttonNew.onpointerdown = (event) => {
     send(event);

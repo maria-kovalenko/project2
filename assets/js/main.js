@@ -1,5 +1,4 @@
 //-------------------Checkbox Border-------------------------------
-
 const allCheckbox = document.querySelectorAll(".card__checkbox");
 
 function handleChecked(e) {
