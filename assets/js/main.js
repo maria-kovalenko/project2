@@ -1,4 +1,37 @@
 //--------------------Validation and send-------------------------
+
+
+const form = document.querySelector('.form')
+const buttonNext = document.querySelector("#button_next");
+
+// Добавление событиЙ отслеживания ввода символов
+// buttonNext.addEventListener("pointerdown", send);
+// form.querySelectorAll('.form__wrapper').forEach(el => {
+//   let input = el.querySelector('input')
+//   let method = 'handleEvent' + input.name[0].toUpperCase() + input.name.slice(1)
+//   if (method in validation) {
+//     input.oninput = function(event) {
+//       validation[method](event)
+//     }
+//   }
+// })
+
+// Отправка данных формы и контрольная провека данных
+function send() {
+  if(buttonNext.dataset.slide !== '5') return
+  alert('Форма отправляется!')
+  // const formData = new FormData(form)
+  // let valid = validation.validForm(form, formData);
+  // if(valid) {
+  //   setTimeout(()=>{alert('Форма отправляется!')}, 1000)
+  //   // form.submit()
+  // }
+}
+buttonNext.onpointerdown = (event) => {
+  send(event);
+}
+
+
 const validation =  {
   res: [],
   wrapper: null,
@@ -121,36 +154,6 @@ const validation =  {
     this.showSuccess(input, feedback)
     return true
   }
-}
-
-const form = document.querySelector('.form')
-const buttonNext = document.querySelector("#button_next");
-
-// Добавление событиЙ отслеживания ввода символов
-// buttonNext.addEventListener("pointerdown", send);
-// form.querySelectorAll('.form__wrapper').forEach(el => {
-//   let input = el.querySelector('input')
-//   let method = 'handleEvent' + input.name[0].toUpperCase() + input.name.slice(1)
-//   if (method in validation) {
-//     input.oninput = function(event) {
-//       validation[method](event)
-//     }
-//   }
-// })
-
-// Отправка данных формы и контрольная провека данных
-function send() {
-  if(buttonNext.dataset.slide !== '5') return
-  alert('Форма отправляется!')
-  // const formData = new FormData(form)
-  // let valid = validation.validForm(form, formData);
-  // if(valid) {
-  //   setTimeout(()=>{alert('Форма отправляется!')}, 1000)
-  //   // form.submit()
-  // }
-}
-buttonNext.onpointerdown = (event) => {
-  send(event);
 }
 
 //-------------------Checkbox Border-------------------------------
