@@ -141,7 +141,8 @@ const inputName = form.querySelector("#name");
 //   }
 // })
 inputName.oninput = function(event) {
-      validation.handleEventName(event)
+    alert('ok')
+      // validation.handleEventName(event)
 }
 
 
