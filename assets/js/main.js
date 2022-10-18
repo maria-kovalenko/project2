@@ -124,7 +124,7 @@
 // }
 //
 // const form = document.querySelector('.form')
-// const buttonNext = document.querySelector("#button_next");
+const buttonNext = document.querySelector("#button_next");
 
 // Добавление событиЙ отслеживания ввода символов
 // buttonNext.addEventListener("pointerdown", send);
