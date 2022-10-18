@@ -10,7 +10,9 @@ form.querySelectorAll('.form__wrapper').forEach(el => {
   let input = el.querySelector('input')
   let method = 'handleEvent' + input.name[0].toUpperCase() + input.name.slice(1)
   if (method in validation) {
-    input.addEventListener("input", validation[method]);
+    input.oninput = function(event) {
+      validation[method](event)
+    }
   }
 })
 
