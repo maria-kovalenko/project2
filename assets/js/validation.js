@@ -36,10 +36,12 @@ const validation =  {
     // СОБЫТИЯ ОТСЛЕЖИВАНИЯ ВВОДА СИМВОЛОВ
     handleEventName(event) {
         let input = event.target
-        let feedback = event.event.composedPath()[1].querySelector('.feedback')
-        validation.ValidName(event.target.value, input, feedback)
         alert(input)
+        let feedback = event.event.composedPath()[1].querySelector('.feedback')
         alert(feedback)
+        validation.ValidName(event.target.value, input, feedback)
+
+
     },
     handleEventSurname(event) {
         let input = event.target
