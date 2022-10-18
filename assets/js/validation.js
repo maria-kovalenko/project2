@@ -35,10 +35,10 @@ const validation =  {
 
     // СОБЫТИЯ ОТСЛЕЖИВАНИЯ ВВОДА СИМВОЛОВ
     handleEventName(event) {
-        console.log(event.composedPath())
-        let input = event.target
-        let feedback = event.event.composedPath()[1].querySelector('.feedback')
-        validation.ValidName(event.target.value, input, feedback)
+        alert('ok')
+        // let input = event.target
+        // let feedback = event.event.composedPath()[1].querySelector('.feedback')
+        // validation.ValidName(event.target.value, input, feedback)
     },
     handleEventSurname(event) {
         let input = event.target
@@ -141,8 +141,7 @@ const inputName = form.querySelector("#name");
 //   }
 // })
 inputName.oninput = function(event) {
-    alert('ok')
-      // validation.handleEventName(event)
+      validation.handleEventName(event)
 }
 
 
