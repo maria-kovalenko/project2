@@ -34,26 +34,26 @@ const validation =  {
     },
 
     // СОБЫТИЯ ОТСЛЕЖИВАНИЯ ВВОДА СИМВОЛОВ
-    handleEventName(event) {
-        let input = event.target
-        let feedback = event.path[1].querySelector('.feedback')
-        validation.ValidName(event.target.value, input, feedback)
-    },
-    handleEventSurname(event) {
-        let input = event.target
-        let feedback = event.path[1].querySelector('.feedback')
-        validation.ValidSurname(event.target.value, input, feedback)
-    },
-    handleEventEmail(event) {
-        let input = event.target
-        let feedback = event.path[1].querySelector('.feedback')
-        validation.ValidEmail(event.target.value, input, feedback)
-    },
-    handleEventPhone(event) {
-        let input = event.target
-        let feedback = event.path[2].querySelector('.feedback')
-        validation.ValidPhone(event.target.value, input, feedback)
-    },
+    // handleEventName(event) {
+    //     let input = event.target
+    //     let feedback = event.path[1].querySelector('.feedback')
+    //     validation.ValidName(event.target.value, input, feedback)
+    // },
+    // handleEventSurname(event) {
+    //     let input = event.target
+    //     let feedback = event.path[1].querySelector('.feedback')
+    //     validation.ValidSurname(event.target.value, input, feedback)
+    // },
+    // handleEventEmail(event) {
+    //     let input = event.target
+    //     let feedback = event.path[1].querySelector('.feedback')
+    //     validation.ValidEmail(event.target.value, input, feedback)
+    // },
+    // handleEventPhone(event) {
+    //     let input = event.target
+    //     let feedback = event.path[2].querySelector('.feedback')
+    //     validation.ValidPhone(event.target.value, input, feedback)
+    // },
 
 
     //МЕТОДЫ ПРОВЕРКИ (СОДЕРЖАТ ПРАВИЛА ПРОВЕРКИ)
