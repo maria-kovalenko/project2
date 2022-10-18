@@ -1,4 +1,4 @@
-export const validation =  {
+const validation =  {
     res: [],
     wrapper: null,
 
