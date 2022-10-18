@@ -153,8 +153,8 @@ function send() {
     const formData = new FormData(form)
     let valid = validation.validForm(form, formData);
     if(valid) {
-      setTimeout(()=>{alert('Форма отправляется!')}, 1000)
-      // form.submit()
+      // setTimeout(()=>{alert('Форма отправляется!')}, 1000)
+      form.submit()
     }
 }
 
