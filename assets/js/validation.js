@@ -36,34 +36,28 @@ const validation =  {
     // СОБЫТИЯ ОТСЛЕЖИВАНИЯ ВВОДА СИМВОЛОВ
     handleEventName(event) {
         let input = event.target
-        alert(input)
         let feedback = event.composedPath()[1].querySelector('.feedback')
-        alert(feedback)
         validation.ValidName(event.target.value, input, feedback)
-
-
     },
     handleEventSurname(event) {
         let input = event.target
-        let feedback = event.path[1].querySelector('.feedback')
+        let feedback = event.composedPath()[1].querySelector('.feedback')
         validation.ValidSurname(event.target.value, input, feedback)
     },
     handleEventEmail(event) {
-
         let input = event.target
-        let feedback = event.path[1].querySelector('.feedback')
+        let feedback = event.composedPath()[1].querySelector('.feedback')
         // validation.ValidEmail(event.target.value, input, feedback)
     },
     handleEventPhone(event) {
         let input = event.target
-        let feedback = event.path[2].querySelector('.feedback')
+        let feedback = event.composedPath()[2].querySelector('.feedback')
         validation.ValidPhone(event.target.value, input, feedback)
     },
 
 
     //МЕТОДЫ ПРОВЕРКИ (СОДЕРЖАТ ПРАВИЛА ПРОВЕРКИ)
     ValidName(name, input, feedback) {
-
         if (name.replace(/\s/g, '') === "") {
             this.showError(`Поле "${input.placeholder}" не должно быть пустым`, input, feedback)
             return false
@@ -133,21 +127,21 @@ const validation =  {
 const form = document.querySelector('.form')
 const buttonNew = document.querySelector("#button_next");
 const inputName = form.querySelector("#name");
+const inputSurname = form.querySelector("#surname");
+const inputPhone = form.querySelector("#phone");
 
-// Добавление событиЙ отслеживания ввода символов
-// form.querySelectorAll('.form__wrapper').forEach(el => {
-//   let input = el.querySelector('input')
-//   let method = 'handleEvent' + input.name[0].toUpperCase() + input.name.slice(1)
-//   if (method in validation) {
-//     input.oninput = function(event) {
-//       validation[method](event)
-//     }
-//   }
-// })
 inputName.oninput = function(event) {
       validation.handleEventName(event)
 }
-
+inputSurname.oninput = function(event) {
+    validation.handleEventSurname(event)
+}
+inputPhone.oninput = function(event) {
+    validation.handleEventPhone(event)
+}
+buttonNew.onpointerdown = (event) => {
+    send(event);
+}
 
 // Отправка данных формы и контрольная провека данных
 function send() {
@@ -160,6 +154,15 @@ function send() {
     //   // form.submit()
     // }
 }
-buttonNew.onpointerdown = (event) => {
-    send(event);
-}
+
+
+// Добавление событиЙ отслеживания ввода символов
+// form.querySelectorAll('.form__wrapper').forEach(el => {
+//   let input = el.querySelector('input')
+//   let method = 'handleEvent' + input.name[0].toUpperCase() + input.name.slice(1)
+//   if (method in validation) {
+//     input.oninput = function(event) {
+//       validation[method](event)
+//     }
+//   }
+// })
