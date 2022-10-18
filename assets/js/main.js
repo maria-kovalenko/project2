@@ -26,7 +26,9 @@ function send() {
     // form.submit()
   }
 }
-buttonNext.addEventListener("pointerdown", send);
+buttonNext.onpointerdown = (event) => {
+  send(event);
+}
 
 //-------------------Checkbox Border-------------------------------
 
