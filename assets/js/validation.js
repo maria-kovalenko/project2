@@ -1,19 +1,20 @@
 const validation =  {
-    res: [],
+    // res: [],
     wrapper: null,
 
     //Метод контрольной валидации перед отправкой
     validForm(elem, formData) {
+        let res = []
         this.wrapper = elem.querySelectorAll('.form__wrapper');
         this.wrapper.forEach(el => {
             let input = el.querySelector('input')
             let feedback = el.querySelector('.feedback')
             let method = 'Valid' + input.name[0].toUpperCase() + input.name.slice(1)
             if (method in this) {
-                this.res.push(this[method](formData.get(input.name), input, feedback))
+                res.push(this[method](formData.get(input.name), input, feedback))
             }
         })
-        for (let value of this.res) {
+        for (let value of res) {
             if(!value) {return false}
         }
         return true
