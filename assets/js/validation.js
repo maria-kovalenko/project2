@@ -38,6 +38,8 @@ const validation =  {
         let input = event.target
         let feedback = event.event.composedPath()[1].querySelector('.feedback')
         validation.ValidName(event.target.value, input, feedback)
+        alert(input)
+        alert(feedback)
     },
     handleEventSurname(event) {
         let input = event.target
@@ -59,7 +61,7 @@ const validation =  {
 
     //МЕТОДЫ ПРОВЕРКИ (СОДЕРЖАТ ПРАВИЛА ПРОВЕРКИ)
     ValidName(name, input, feedback) {
-        alert('qwe')
+
         if (name.replace(/\s/g, '') === "") {
             this.showError(`Поле "${input.placeholder}" не должно быть пустым`, input, feedback)
             return false
