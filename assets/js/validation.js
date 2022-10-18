@@ -10,7 +10,7 @@ const validation =  {
             let feedback = el.querySelector('.feedback')
             let method = 'Valid' + input.name[0].toUpperCase() + input.name.slice(1)
             if (method in this) {
-                // this.res.push(this[method](formData.get(input.name), input, feedback))
+                this.res.push(this[method](formData.get(input.name), input, feedback))
             }
         })
         for (let value of this.res) {
@@ -37,12 +37,12 @@ const validation =  {
     handleEventName(event) {
         let input = event.target
         let feedback = event.path[1].querySelector('.feedback')
-        // validation.ValidName(event.target.value, input, feedback)
+        validation.ValidName(event.target.value, input, feedback)
     },
     handleEventSurname(event) {
         let input = event.target
         let feedback = event.path[1].querySelector('.feedback')
-        // validation.ValidSurname(event.target.value, input, feedback)
+        validation.ValidSurname(event.target.value, input, feedback)
     },
     handleEventEmail(event) {
         let input = event.target
@@ -52,7 +52,7 @@ const validation =  {
     handleEventPhone(event) {
         let input = event.target
         let feedback = event.path[2].querySelector('.feedback')
-        // validation.ValidPhone(event.target.value, input, feedback)
+        validation.ValidPhone(event.target.value, input, feedback)
     },
 
 
