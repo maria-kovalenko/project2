@@ -35,8 +35,9 @@ const validation =  {
 
     // СОБЫТИЯ ОТСЛЕЖИВАНИЯ ВВОДА СИМВОЛОВ
     handleEventName(event) {
+        console.log(event.composedPath())
         let input = event.target
-        let feedback = event.path[1].querySelector('.feedback')
+        let feedback = event.event.composedPath()[1].querySelector('.feedback')
         validation.ValidName(event.target.value, input, feedback)
     },
     handleEventSurname(event) {
@@ -45,6 +46,7 @@ const validation =  {
         validation.ValidSurname(event.target.value, input, feedback)
     },
     handleEventEmail(event) {
+
         let input = event.target
         let feedback = event.path[1].querySelector('.feedback')
         // validation.ValidEmail(event.target.value, input, feedback)
