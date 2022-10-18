@@ -57,69 +57,69 @@ const validation =  {
 
 
     //МЕТОДЫ ПРОВЕРКИ (СОДЕРЖАТ ПРАВИЛА ПРОВЕРКИ)
-    // ValidName(name, input, feedback) {
-    //     if (name.replace(/\s/g, '') === "") {
-    //         this.showError(`Поле "${input.placeholder}" не должно быть пустым`, input, feedback)
-    //         return false
-    //     }
-    //     this.showSuccess(input, feedback)
-    //     return true
-    // },
-    //
-    // ValidSurname(name, input, feedback) {
-    //     if (name.replace(/\s/g, '') === "") {
-    //         this.showError(`Поле "${input.placeholder}" не должно быть пустым`, input, feedback)
-    //         return false
-    //     }
-    //     this.showSuccess(input, feedback)
-    //     return true
-    // },
-    //
-    // ValidEmail(email, input, feedback) {
-    //     if (email.replace(/\s/g, '') === "") {
-    //         this.showError(`Поле "${input.placeholder}" не должно быть пустым`, input, feedback)
-    //         return false
-    //     }
-    //     const regex = /^([\w]+\.?)+(?<!\.)@(?!\.)[a-zа-я0-9ё\.-]+\.?[a-zа-яё]{2,}$/ui;
-    //     let result = email.match(regex);
-    //     if (!result) {
-    //         this.showError('Недопустимый формат email-адреса', input, feedback)
-    //         return false
-    //     }
-    //     this.showSuccess(input, feedback)
-    //     return true
-    // },
-    //
-    // ValidPhone(phone, input, feedback) {
-    //     // проверка на пустоту
-    //     if (phone.replace(/\s/g, '') === "") {
-    //         this.showError(`Поле "Номер телефона" не должно быть пустым`, input, feedback)
-    //         return false
-    //     }
-    //     // ввод только цифр
-    //     const regex = /([0-9]|[()|-]|\s){1,}/g;
-    //     let match = phone.match(regex)
-    //     if (!match) {
-    //         input.value = ''
-    //         this.showError(`Поле "Номер телефона" может содержать только цифры`, input, feedback)
-    //         return false
-    //     }else {
-    //         input.value = match[0]
-    //     }
-    //     // Проверка длинны телефона в соответсвии плейсхолдера
-    //
-    //     let place = input.placeholder.replace(/([()|-]|\s)/g, '')
-    //     if (phone.replace(/([()|-]|\s)/g, '').length > (place.length + 1)) {
-    //         this.showError(`Номер телефона лишком длинный`, input, feedback)
-    //         return false
-    //     }
-    //     if (phone.replace(/([()|-]|\s)/g, '').length < (place.length - 2)) {
-    //         this.showError(`Номер телефона лишком короткий`, input, feedback)
-    //         return false
-    //     }
-    //     this.showSuccess(input, feedback)
-    //     return true
-    // }
+    ValidName(name, input, feedback) {
+        if (name.replace(/\s/g, '') === "") {
+            this.showError(`Поле "${input.placeholder}" не должно быть пустым`, input, feedback)
+            return false
+        }
+        this.showSuccess(input, feedback)
+        return true
+    },
+
+    ValidSurname(name, input, feedback) {
+        if (name.replace(/\s/g, '') === "") {
+            this.showError(`Поле "${input.placeholder}" не должно быть пустым`, input, feedback)
+            return false
+        }
+        this.showSuccess(input, feedback)
+        return true
+    },
+
+    ValidEmail(email, input, feedback) {
+        if (email.replace(/\s/g, '') === "") {
+            this.showError(`Поле "${input.placeholder}" не должно быть пустым`, input, feedback)
+            return false
+        }
+        const regex = /^([\w]+\.?)+(?<!\.)@(?!\.)[a-zа-я0-9ё\.-]+\.?[a-zа-яё]{2,}$/ui;
+        let result = email.match(regex);
+        if (!result) {
+            this.showError('Недопустимый формат email-адреса', input, feedback)
+            return false
+        }
+        this.showSuccess(input, feedback)
+        return true
+    },
+
+    ValidPhone(phone, input, feedback) {
+        // проверка на пустоту
+        if (phone.replace(/\s/g, '') === "") {
+            this.showError(`Поле "Номер телефона" не должно быть пустым`, input, feedback)
+            return false
+        }
+        // ввод только цифр
+        const regex = /([0-9]|[()|-]|\s){1,}/g;
+        let match = phone.match(regex)
+        if (!match) {
+            input.value = ''
+            this.showError(`Поле "Номер телефона" может содержать только цифры`, input, feedback)
+            return false
+        }else {
+            input.value = match[0]
+        }
+        // Проверка длинны телефона в соответсвии плейсхолдера
+
+        let place = input.placeholder.replace(/([()|-]|\s)/g, '')
+        if (phone.replace(/([()|-]|\s)/g, '').length > (place.length + 1)) {
+            this.showError(`Номер телефона лишком длинный`, input, feedback)
+            return false
+        }
+        if (phone.replace(/([()|-]|\s)/g, '').length < (place.length - 2)) {
+            this.showError(`Номер телефона лишком короткий`, input, feedback)
+            return false
+        }
+        this.showSuccess(input, feedback)
+        return true
+    }
 }
 
 //--------------------Validation and send-------------------------
