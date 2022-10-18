@@ -126,17 +126,22 @@ const validation =  {
 
 const form = document.querySelector('.form')
 const buttonNew = document.querySelector("#button_next");
+const inputName = form.querySelector("#name");
 
 // Добавление событиЙ отслеживания ввода символов
-form.querySelectorAll('.form__wrapper').forEach(el => {
-  let input = el.querySelector('input')
-  let method = 'handleEvent' + input.name[0].toUpperCase() + input.name.slice(1)
-  if (method in validation) {
-    input.oninput = function(event) {
-      validation[method](event)
-    }
-  }
-})
+// form.querySelectorAll('.form__wrapper').forEach(el => {
+//   let input = el.querySelector('input')
+//   let method = 'handleEvent' + input.name[0].toUpperCase() + input.name.slice(1)
+//   if (method in validation) {
+//     input.oninput = function(event) {
+//       validation[method](event)
+//     }
+//   }
+// })
+inputName.oninput = function(event) {
+      validation.handleEventName(event)
+}
+
 
 // Отправка данных формы и контрольная провека данных
 function send() {
