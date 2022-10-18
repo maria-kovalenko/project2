@@ -37,7 +37,7 @@ const validation =  {
     handleEventName(event) {
         let input = event.target
         alert(input)
-        let feedback = event.event.composedPath()[1].querySelector('.feedback')
+        let feedback = event.composedPath()[1].querySelector('.feedback')
         alert(feedback)
         validation.ValidName(event.target.value, input, feedback)
 
