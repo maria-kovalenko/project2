@@ -1,33 +1,4 @@
-//--------------------Validation and send-------------------------
-import {validation} from "./validation.js";
-
-const form = document.querySelector('.form')
-const buttonNext = document.querySelector("#button_next");
-
-// Добавление событиЙ отслеживания ввода символов
-buttonNext.addEventListener("pointerdown", send);
-form.querySelectorAll('.form__wrapper').forEach(el => {
-  let input = el.querySelector('input')
-  let method = 'handleEvent' + input.name[0].toUpperCase() + input.name.slice(1)
-  if (method in validation) {
-    input.addEventListener("input", validation[method]);
-  }
-})
-
-// Отправка данных формы и контрольная провека данных
-function send() {
-  if(buttonNext.dataset.slide !== '5') return
-  const formData = new FormData(form)
-  let valid = validation.validForm(form, formData);
-  if(valid) {
-    setTimeout(()=>{alert('Форма отправляется!')}, 1000)
-    // form.submit()
-  }
-}
-buttonNext.addEventListener("pointerdown", send);
-
 //-------------------Checkbox Border-------------------------------
-
 const allCheckbox = document.querySelectorAll(".card__checkbox");
 
 function handleChecked(e) {
